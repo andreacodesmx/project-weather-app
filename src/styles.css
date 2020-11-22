@@ -12,16 +12,16 @@ form {
 .temperature {
   padding-bottom: 10px;
   font-size: 120px;
-  color: whitesmoke;
+  color: #7b71a0;
 }
 .forecast {
   margin-top: 10px;
   padding-bottom: 80px;
   font-size: 30px;
-  color: lightgray;
+  color: #c5a0bb;
 }
 h3 {
-  color: #52424d;
+  color: #c5a0bb;
 }
 h4 {
   color: lightgray;
