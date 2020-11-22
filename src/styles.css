@@ -16,7 +16,7 @@ form {
 }
 .forecast {
   margin-top: 10px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
   font-size: 30px;
   color: #c5a0bb;
 }
@@ -24,12 +24,18 @@ h3 {
   color: #c5a0bb;
 }
 h4 {
-  color: lightgray;
+  color: #7b71a0;
 }
 .location {
   color: white;
   padding-top: 10px;
 }
+.credits {
+  color: #96a9c7;
+  text-align: center;
+  padding: 15px;
+}
+
 body {
   min-height: 100%;
   background-attachment: fixed;
