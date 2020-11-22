@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pink Weather App</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="src/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form id="search">
+        <input type="text" id="search-city" placeholder="Change city" />
+      </form>
+      <p id="current-city" class="location">Mérida, México</p>
+      <p id="current-date" class="location">Date, month, time</p>
+      <h1 id="temperature" class="temperature">25ºC</h1>
+      <h2 class="forecast">Heavy rainfall</h2>
+
+      <div class="row">
+        <div class="col-sm">
+          <div
+            class="card border-light mb-3 bg-transparent"
+            style="width: 6rem"
+          >
+            <div class="card-body">
+              <h3 class="card-title">MO</h3>
+              <h4 class="card-subtitle mb-2">25ºC</h4>
+              <p class="card-text">🌧</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div
+            class="card border-light mb-3 bg-transparent"
+            style="width: 6rem"
+          >
+            <div class="card-body">
+              <h3 class="card-title">TU</h3>
+              <h4 class="card-subtitle mb-2">20ºC</h4>
+              <p class="card-text">🌧</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div
+            class="card border-light mb-3 bg-transparent"
+            style="width: 6rem"
+          >
+            <div class="card-body">
+              <h3 class="card-title">WE</h3>
+              <h4 class="card-subtitle mb-2">22ºC</h4>
+              <p class="card-text">🌧</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div
+            class="card border-light mb-3 bg-transparent"
+            style="width: 6rem"
+          >
+            <div class="card-body">
+              <h3 class="card-title">TH</h3>
+              <h4 class="card-subtitle mb-2">25ºC</h4>
+              <p class="card-text">🌧</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div
+            class="card border-light mb-3 bg-transparent"
+            style="width: 6rem"
+          >
+            <div class="card-body">
+              <h3 class="card-title">FR</h3>
+              <h4 class="card-subtitle mb-2">22ºC</h4>
+              <p class="card-text">🌧</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
