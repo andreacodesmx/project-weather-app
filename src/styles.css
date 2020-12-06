@@ -6,8 +6,17 @@ p {
   text-align: center;
   font-family: "Quicksand", sans-serif;
 }
+h2, h3 {
+  color: #c5a0bb;
+}
+h4 {
+  color: #7b71a0;
+}
 form {
   padding: 20px;
+}
+h2:first-letter {
+  text-transform: capitalize;
 }
 .temperature {
   padding-bottom: 10px;
@@ -20,12 +29,11 @@ form {
   font-size: 30px;
   color: #c5a0bb;
 }
-h3 {
-  color: #c5a0bb;
+.conditions {
+  font-weight: lighter;
+  font-size: medium;
 }
-h4 {
-  color: #7b71a0;
-}
+
 .location {
   color: white;
   padding-top: 10px;

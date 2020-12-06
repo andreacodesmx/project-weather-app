@@ -39,17 +39,23 @@ function displayCity(event) {
 let currentCity = document.querySelector("#search");
 currentCity.addEventListener("submit", displayCity);
 
-// current temperature
+// current conditions
 
-function currentTemp(response) {
+function currentConditions(response) {
   let h1 = document.querySelector("#temperature");
   let temperature = Math.round(response.data.main.temp);
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
   h1.innerHTML = `${temperature}ºC`;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function defineCity(city) {
   let apiKey = "013da9ae1bd8d6b9c0dd6dfd35f601c3";
   let cityValue = document.querySelector("#search-city").value;
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`;
-  axios.get(url).then(currentTemp);
+  axios.get(url).then(currentConditions);
 }
