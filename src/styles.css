@@ -13,21 +13,29 @@ h4 {
   color: #7b71a0;
 }
 form {
-  padding: 20px;
+  padding: 15px;
 }
 h2:first-letter {
   text-transform: capitalize;
 }
+img {
+  margin: auto;
+  display: block;
+}
 .temperature {
   padding-bottom: 10px;
-  font-size: 120px;
+  font-size: 100px;
   color: #7b71a0;
 }
 .forecast {
-  margin-top: 10px;
-  padding-bottom: 50px;
+  margin-top: 5px;
+  padding-bottom: 30px;
   font-size: 30px;
   color: #c5a0bb;
+}
+.location:first-letter {
+  text-transform: capitalize;
+
 }
 .conditions {
   font-weight: lighter;
@@ -36,14 +44,16 @@ h2:first-letter {
 
 .location {
   color: white;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 .credits {
   color: #96a9c7;
   text-align: center;
-  padding: 15px;
+  padding: 10px;
 }
-
+.row {
+  padding-top: 80px;
+}
 body {
   min-height: 100%;
   background-attachment: fixed;
@@ -63,6 +73,4 @@ body {
     #edd6e6
   );
 }
-.row {
-  padding-top: 100px;
-}
+
