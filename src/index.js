@@ -39,12 +39,15 @@ function displayCity(event) {
 let currentCity = document.querySelector("#search");
 currentCity.addEventListener("submit", displayCity);
 
+
 function defineCity(city) {
   let apiKey = "013da9ae1bd8d6b9c0dd6dfd35f601c3";
   let cityValue = document.querySelector("#search-city").value;
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`;
   axios.get(url).then(currentConditions);
 }
+
+
 
 // current conditions
 
@@ -88,3 +91,5 @@ fahrenheitConvertion.addEventListener("click", convertFahrenheit);
 
 let celsiusConvertion = document.querySelector("#celsius");
 celsiusConvertion.addEventListener("click", convertCelsius);
+
+defineCity("Merida");
