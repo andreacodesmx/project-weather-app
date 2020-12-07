@@ -22,10 +22,30 @@ img {
   margin: auto;
   display: block;
 }
+.search-city {
+  border: 1px solid #e3d5e9;
+  background-color: #f9f5fa ;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
+
+}
 .temperature {
   padding-bottom: 10px;
   font-size: 100px;
   color: #7b71a0;
+}
+.unit {
+  text-decoration: none;
+  color: #7b71a0;
+  cursor: default;
+}
+.unit:hover {
+  text-decoration: none;
+  cursor: default;
+  color: #c5a0bb;
+}
+.separator {
+  color: #c5a0bb;
 }
 .forecast {
   margin-top: 5px;

@@ -19,12 +19,17 @@
     <div class="container">
       
       <form id="search">
-        <input type="text" id="search-city" placeholder="Change city" />
+        <input type="text" id="search-city" class="search-city" placeholder="Change city" />
       </form>
       <p id="current-city" class="location">Mérida</p>
       <p id="current-date" class="location">Date, time</p>
       <img src="" id="icon">
-      <h1 id="temperature" class="temperature">25ºC</h1>
+      <h1> 
+        <span id="temperature" class="temperature">25</span>
+        <span><a href="" id="celsius" class="unit">C</a> <strong class="separator"> | </strong>
+        <a href="" id="fahrenheit" class="unit">F</a></span>
+      
+      </h1>
       <h2 id="description">Heavy rainfall</h2>
       <h3 class="conditions">Humidity: <span id="humidity"></span> % | Wind: <span id="wind"></span> km/h</h3>
 
@@ -92,7 +97,7 @@
       </div>
       <p class="credits">
         <a href="https://github.com/andreacodesmx/project-weather-app">Coded</a>
-        in 🇲🇽  with 🖤
+        in Mx with 🖤
       </p>
     </div> 
      <script src="src/index.js"></script>

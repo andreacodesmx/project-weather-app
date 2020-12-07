@@ -39,25 +39,52 @@ function displayCity(event) {
 let currentCity = document.querySelector("#search");
 currentCity.addEventListener("submit", displayCity);
 
-// current conditions
-
-function currentConditions(response) {
-  let h1 = document.querySelector("#temperature");
-  let temperature = Math.round(response.data.main.temp);
-  let descriptionElement = document.querySelector("#description");
-  let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#wind");
-  let iconelement = document.querySelector("#icon");
-  h1.innerHTML = `${temperature}ºC`;
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconelement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-}
-
 function defineCity(city) {
   let apiKey = "013da9ae1bd8d6b9c0dd6dfd35f601c3";
   let cityValue = document.querySelector("#search-city").value;
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`;
   axios.get(url).then(currentConditions);
 }
+
+// current conditions
+
+function currentConditions(response) {
+  let temp = document.querySelector("#temperature");
+  let temperature = Math.round(response.data.main.temp);
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let iconelement = document.querySelector("#icon");
+  celsiusTemp = response.data.main.temp;
+  temp.innerHTML = `${temperature}`;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconelement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+}
+
+
+
+// temperature convertion
+
+function convertFahrenheit(event){
+event.preventDefault();
+let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+let temperatureElement = document.querySelector("#temperature");
+temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function convertCelsius(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
+let fahrenheitConvertion = document.querySelector("#fahrenheit");
+fahrenheitConvertion.addEventListener("click", convertFahrenheit);
+
+
+let celsiusConvertion = document.querySelector("#celsius");
+celsiusConvertion.addEventListener("click", convertCelsius);
